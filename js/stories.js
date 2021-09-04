@@ -152,6 +152,8 @@ async function handleStorySubmit(evt) {
   const newStoryMarkup = generateStoryMarkup(story);
   $allStoriesList.prepend(newStoryMarkup);
   $ownStories.prepend(newStoryMarkup);
+  $storyForm.hide();
+  putStoriesOnPage();
 }
 
 $storyForm.on("submit", handleStorySubmit);
